@@ -5,7 +5,7 @@ const Helper = {
         Vue.prototype.appName = process.env.VUE_APP_NAME
         Vue.prototype.getImage = function (image) {
                 if(image != null && image.length > 0){
-                    return process.env.VUE_APP_BACKEND_URL + "/storage/images/" + image
+                    return process.env.VUE_APP_BACKEND_URL + "/storage/" + image
                 }
                 return "/img/unavailable.png"
         }

@@ -56,7 +56,7 @@
       <v-navigation-drawer app v-model="drawer">
         <v-list-item v-if="!guest">
           <v-list-item-avatar>
-            <v-img :src="getImage('users/' + user.avatar)"></v-img>
+            <v-img :src="getImage(user.avatar)"></v-img>
           </v-list-item-avatar>
           <v-list-item-content>
             <v-list-item-title>{{ user.name }}</v-list-item-title>
@@ -134,7 +134,7 @@
       <v-footer app absolute>
         <v-card-text class="text-center">
           &copy; {{ new Date().getFullYear()}} -
-          <strong>VueShop</strong>
+          <strong>{{ appName }}</strong>
         </v-card-text>
       </v-footer>
     </v-card>

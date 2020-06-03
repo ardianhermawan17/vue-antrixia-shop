@@ -8,14 +8,14 @@
                 <v-flex v-for="(book) in books" :key="`book-`+book.id" xs6>
                     <v-card :to="'/book/'+ book.slug">
                         <v-img
-                                :src="getImage('books/'+book.cover)"
+                                :src="getImage(book.cover)"
                                 class="white--text"
                         >
-                            <v-card-title
-                                    class="fill-height align-end"
-                                    v-text="book.title"
-                            ></v-card-title>
                         </v-img>
+                        <v-card-title
+                                class="fill-height align-end"
+                                v-text="book.title"
+                        ></v-card-title>
                     </v-card>
                 </v-flex>
             </v-layout>

@@ -65,7 +65,7 @@
                                             :key="'cart'+index"
                                     >
                                         <v-list-item-avatar>
-                                            <v-img :src="getImage('/books/'+item.cover)"></v-img>
+                                            <v-img :src="getImage(item.cover)"></v-img>
                                         </v-list-item-avatar>
 
                                         <v-list-item-content>
@@ -316,15 +316,16 @@
                         let {data} = response
                         if(data && data.status === 'success'){
                             //LOCAL PAYMENT
-                            this.setPayment(data.data)
-                            this.$router.push({path: "/payment"})
-                            this.setCart([])
+                            // this.setPayment(data.data)
+                            // this.$router.push({path: "/payment"})
+                            // this.setCart([])
 
                             //MIDTRANS
                             //TODO :: MIDTRANS - TRANSAKSI
-                            // this.setCart([])
-                            // let payment_link    = data.data.payment_link
-                            // window.location     = payment_link
+                            this.setCart([])
+                            this.setPayment(data.data)
+                            let payment_link    = data.data.payment_link
+                            window.location     = payment_link
                         }
 
                         this.setAlert({

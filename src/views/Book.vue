@@ -2,7 +2,7 @@
     <div class="d-flex flex-column">
         <v-card v-if="book.slug">
             <v-img
-                    :src="getImage('books/'+book.cover)"
+                    :src="getImage(book.cover)"
                     class="white--text"
                     height="200px"
             >

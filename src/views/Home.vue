@@ -18,18 +18,18 @@
                         xs6>
                     <v-card :to="'/category/'+ category.slug">
                         <v-img
-                                :src="getImage('categories/' + category.image)"
+                                :src="getImage( category.image)"
                                 class="white--text"
-                                max-height="300px"
+                                height="300px"
                         >
-                            <v-card-title
-                                    class="fill-height align-end"
-                                    v-text="category.name"
-                            ></v-card-title>
-                            <v-card-text>
-                                {{category.image}}
-                            </v-card-text>
                         </v-img>
+                        <v-card-title
+                                class="fill-height align-end"
+                                v-text="category.name"
+                        ></v-card-title>
+<!--                        <v-card-text>-->
+<!--                            {{category.image}}-->
+<!--                        </v-card-text>-->
                     </v-card>
                 </v-flex>
             </v-layout>

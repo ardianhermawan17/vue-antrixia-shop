@@ -3,20 +3,31 @@
         <v-subheader>Histori Belanja</v-subheader>
         <v-card flat>
             <v-container>
-                <v-simple-table>
-                    <tbody>
-                    <tr v-for="item in items" :key="item.id">
-                        <td>
-                            Invoice: {{ item.invoice_number }}
-                            <div class="primary--text title">Rp. {{ item.total_bill.toLocaleString('id-ID') }}</div>
-                            <small>date: {{ item.updated_at }}. courier: {{ item.courier_service }}</small>
-                        </td>
-                        <td>
-                            {{ item.status }}
-                        </td>
-                    </tr>
-                    </tbody>
-                </v-simple-table>
+                <v-row dense>
+                    <v-col sm="12" v-for="item in items" :key="item.id" >
+                        <v-card color="teal" dark class="row">
+                            <v-col >
+                                <v-card-title class="headline">
+                                    Invoice: {{ item.invoice_number }}
+                                </v-card-title>
+                                <v-card-subtitle>
+                                    <div class="white--text title">Rp. {{ item.total_bill.toLocaleString('id-ID') }}</div>
+                                    <small>date: {{ item.updated_at }}. courier: {{ item.courier_service }}</small>
+                                </v-card-subtitle>
+                            </v-col>
+                            <v-spacer></v-spacer>
+                            <v-col  class="d-flex justify-center align-center">
+                                <v-card-subtitle class="text--white">
+                                    Status :
+                                </v-card-subtitle>
+                                <v-btn depressed dark color="primary" class="pa-2">
+                                    {{ item.status }}
+                                </v-btn>
+                            </v-col>
+                        </v-card>
+                    </v-col>
+                </v-row>
+
             </v-container>
         </v-card>
     </div>
