@@ -20,7 +20,16 @@
                                 <v-card-subtitle class="text--white">
                                     Status :
                                 </v-card-subtitle>
-                                <v-btn depressed dark color="primary" class="pa-2">
+                                <v-btn v-if="item.status === 'FINISH' " depressed dark color="success" class="pa-2">
+                                    {{ item.status }}
+                                </v-btn>
+                                <v-btn v-if="item.status === 'SUBMIT' " depressed dark color="primary" class="pa-2">
+                                    {{ item.status }}
+                                </v-btn>
+                                <v-btn v-if="item.status === 'PROCESS' " depressed dark color="warning" class="pa-2">
+                                    {{ item.status }}
+                                </v-btn>
+                                <v-btn v-if="item.status === 'CANCEL' " depressed dark color="error" class="pa-2">
                                     {{ item.status }}
                                 </v-btn>
                             </v-col>
