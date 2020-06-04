@@ -6,11 +6,11 @@
                     class="white--text"
                     max-height="400px"
             >
-                <v-card-title
-                        class="fill-height align-end"
-                        v-text="category.name"
-                ></v-card-title>
             </v-img>
+            <v-card-title
+                    class="fill-height align-end"
+                    v-text="category.name"
+            ></v-card-title>
         </v-card>
         <v-progress-circular
                 v-if="!category.slug"
@@ -31,12 +31,13 @@
                         <v-img
                                 :src="getImage(book.cover)"
                                 class="white--text"
+                                height="600px"
                         >
-                            <v-card-title
-                                    class="fill-height align-end"
-                                    v-text="book.title"
-                            ></v-card-title>
                         </v-img>
+                        <v-card-title
+                                class="fill-height align-end"
+                                v-text="book.title"
+                        ></v-card-title>
                     </v-card>
                 </v-flex>
             </v-layout>

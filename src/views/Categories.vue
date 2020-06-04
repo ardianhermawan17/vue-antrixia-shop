@@ -10,12 +10,13 @@
                         <v-img
                                 :src="getImage(category.image)"
                                 class="white--text"
+                                height="400px"
                         >
-                            <v-card-title
-                                    class="fill-height align-end"
-                                    v-text="category.name"
-                            ></v-card-title>
                         </v-img>
+                        <v-card-title
+                                class="fill-height align-end"
+                                v-text="category.name"
+                        ></v-card-title>
                     </v-card>
                 </v-flex>
             </v-layout>

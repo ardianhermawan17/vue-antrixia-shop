@@ -6,25 +6,26 @@
                     class="white--text"
                     height="200px"
             >
-                <v-card-title
-                        class="fill-height align-end"
-                        v-text="book.title">
-                </v-card-title>
             </v-img>
+            <v-card-title
+                    class="fill-height align-end"
+                    v-text="book.title"
+            >
+            </v-card-title>
 
             <v-card-text>
                 <v-simple-table dense>
                     <tbody>
                     <tr>
-                        <td><v-icon>mdi-account-tie</v-icon> Author</td>
+                        <td><v-icon color="teal darken-1">mdi-account-tie</v-icon> Author</td>
                         <td>{{ book.author}}</td>
                     </tr>
                     <tr>
-                        <td><v-icon>mdi-bullhorn</v-icon> Publisher</td>
+                        <td><v-icon color="primary">mdi-bullhorn</v-icon> Publisher</td>
                         <td>{{ book.publisher}}</td>
                     </tr>
                     <tr>
-                        <td><v-icon>mdi-weight</v-icon> Weight</td>
+                        <td><v-icon color="black">mdi-weight</v-icon> Weight</td>
                         <td>{{ book.weight }} kg</td>
                     </tr>
                     <tr>
@@ -32,11 +33,11 @@
                         <td>{{ book.stock}} item</td>
                     </tr>
                     <tr>
-                        <td><v-icon>mdi-eye</v-icon>  Views</td>
+                        <td><v-icon color="warning">mdi-eye</v-icon>  Views</td>
                         <td>{{ book.views}}</td>
                     </tr>
                     <tr>
-                        <td><v-icon>mdi-cash</v-icon>  Price</td>
+                        <td><v-icon color="success">mdi-cash</v-icon>  Price</td>
                         <td class="orange--text">Rp {{ book.price.toLocaleString('id-ID')}}</td>
                     </tr>
                     </tbody>
