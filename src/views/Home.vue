@@ -84,7 +84,7 @@ export default {
         .then((response) => {
             let {data} = response.data
             this.books = data
-             console.log(this.books)
+            // console.log(this.books)
         })
         .catch((error) => {
             let {responses} = error
