@@ -37,6 +37,7 @@
 
     </v-app-bar>
     <v-app-bar app color="primary" dark v-else>
+      <v-app-bar-nav-icon class="mt-2" @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
       <v-btn icon @click.stop="$router.go(-1)">
         <v-icon>mdi-arrow-left-circle</v-icon>
       </v-btn>
