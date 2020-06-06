@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.79d85e0ef2c95d3ee33b88e969760c49.js"
+  "/precache-manifest.01b4a0c0646fb39fbfe5ec1f04009a2a.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "antraxiashop"});
